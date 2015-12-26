@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="format-detection" content="telephone=no, email=no">
+  <title>荔枝FM年度总结</title>
+  <link rel="stylesheet" type="text/css" href="./stylesheets/css/main.css">
+  <style>
+    body, html, .container { width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; }
+  </style>
+  <script>
+    if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
+      var version = parseFloat(RegExp.$1);
+      if(version>2.3){
+        var phoneScale = parseInt(window.screen.width)/640;
+        document.write('<meta name="viewport" content="width=640, minimum-scale = '+ phoneScale +', maximum-scale = '+ phoneScale +', target-densitydpi=device-dpi">');
+      }else{
+        document.write('<meta name="viewport" content="width=640, target-densitydpi=device-dpi">');
+      }
+    }else{
+      document.write('<meta name="viewport" content="width=640, user-scalable=no, target-densitydpi=device-dpi">');
+    }
+  </script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="scrollWrap">
+      <div class="pageWrap">
+        <div id="page0" class="page">
+          
+        </div>
+        <div id="page1" class="page">
+          <div class="title"></div>
+          <div class="page-bg"></div>
+          <div class="bingbing">
+            <div class="bingbing-head"></div>
+            <div class="bingbing-body"></div>
+          </div>
+        </div>
+        
+        <div id="page2" class="page">
+          <div class="title"></div>
+          <div class="zhou"></div>
+          <div class="kun"></div>
+          <div class="cake"></div>
+        </div>
+
+        <div id="page3" class="page animated">
+          <div class="page-bg"></div>
+          <div class="duang"></div>
+          <div class="duang"></div>
+          <div class="duang"></div>
+          <div class="adv">
+            <div class="cheng-head"></div>
+            <div class="cheng-body"></div>
+          </div>
+        </div>
+
+        <div id="page4" class="page">
+          <div class="title"></div>
+          <div class="page-bg"></div>
+          <div class="envelope">
+            <div class="envelope-front"></div>
+            <div class="envelope-back"></div>
+            <div class="envelope-paper"></div>
+            <div class="envelope-stamp-left"></div>
+            <div class="envelope-stamp-right"></div>
+          </div>
+        </div>
+
+        <div id="page5" class="page">
+          <div class="title"></div>
+          <div class="page-bg"></div>
+          <div class="page-inner first">
+            <div class="bg"></div>
+            <div class="rocket"></div>
+          </div>
+          <div class="yan one"></div>
+          <div class="yan two"></div>
+          <div class="yan three"></div>
+          <div class="yan four"></div>
+        </div>
+
+        <div id="page6" class="page animated">
+          <div class="title"></div>
+          <div class="page-bg"></div>
+          <div id="earth1" class="earth">
+            <div class="icon-earth1_body"></div>
+            <div class="icon-earth1_face"></div>
+            <div class="icon-earth1_left_foot"></div>
+            <div class="icon-earth1_left_hand"></div>
+            <div class="icon-earth1_right_foot"></div>
+            <div class="icon-earth1_right_hand"></div>
+          </div>
+          <div id="earth2" class="earth">
+            <div class="icon-earth2_body"></div>
+            <div class="icon-earth2_right_hand"></div>
+            <div class="icon-earth2_left_foot"></div>
+            <div class="icon-earth2_right_foot"></div>
+          </div>
+          <div class="star first"></div>
+          <div class="star second"></div>
+          <div class="star third"></div>
+          <div class="star fourth"></div>
+          <div id="flag1" class="flag"></div>
+        </div>
+
+        <div id="page7" class="page">
+          <div class="title"></div>
+          <div class="page-bg"></div>
+          <div class="xidada">
+            <div class="xidada-hand"></div>
+            <div class="xidada-body"></div>
+          </div>
+        </div>
+
+        <div id="page8" class="page">
+          <div class="title"></div>
+          <div class="page-bg"></div>
+          <div class="snowy"></div>
+          <div class="langya">
+            <div class="langya-body"></div>
+          </div>
+        </div>
+
+        <div id="page9" class="page">
+          <div class="title"></div>
+          <div class="yangshi"></div>
+          <div class="wu one"></div>
+          <div class="wu two"></div>
+          <div class="wu three"></div>
+          <div class="wu four"></div>
+          <div class="wu five"></div>
+          <div class="wu six"></div>
+          <div class="wu seven"></div>
+        </div>
+
+      </div>
+      <div class="runway"></div>
+    </div>
+
+    <div class="end" style="display: none;">
+      <div class="title"></div>
+      <div class="lizhi">
+        <div class="lizhi-logo"></div>
+        <div class="lizhi-shadow"></div>
+      </div>
+      <div class="btn-group">
+        <a class="left" href="javascript:;"></a>
+        <a class="right" href="javascript:;"></a>
+      </div>
+    </div>
+
+    <div class="lizhi run">
+      <div class="lizhi-logo"></div>
+      <div class="lizhi-shadow"></div>
+    </div>
+
+    <div class="pos" style="position: fixed; top: 0; left: 0; color:#fff; z-index: 999; width: 100px; height: 50px; background: #f00">{{speed}}</div>
+    <div class="pos2" style="position: fixed; top: 50px; left: 0; color:#fff; z-index: 999; width: 100px; height: 50px; background: #ccc">{{currentPage}}</div>
+    <div class="pos3" style="position: fixed; top: 100px; left: 0; color:#fff; z-index: 999; width: 100px; height: 50px; background: #ccc">{{currentPage}}</div>
+  </div>
+
+  
+  <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+  <script src="./javascripts/lib/vue.min.js"></script>
+  <script src="./javascripts/lib/jquery-2.1.4.min.js"></script>
+  <script src="./javascripts/lib/velocity.min.js"></script>
+  <script src="./javascripts/main.js"></script>
+</body>
+
+</html>

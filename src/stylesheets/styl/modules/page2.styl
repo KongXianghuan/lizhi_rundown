@@ -1,0 +1,49 @@
+@import 'animate'
+
+#page2
+  margin-right: 70px
+  > div
+    position: absolute
+  .title
+    width: 396px
+    height: 178px
+    background: url("../../images/page2_title.png") center no-repeat
+    background-size: 100% auto
+    left: 50%
+    bottom: 630px
+    -webkit-transform: translateX(-50%)
+  .zhou
+    width: 168px
+    height: 517px
+    background: url("../../images/zhou.png") center no-repeat
+    bottom: -66px
+    right: 130px;
+    z-index: 2
+    -webkit-transform: translate3d(-100px,0,0)
+    opacity: 0
+  .kun
+    width: 189px
+    height: 483px
+    background: url("../../images/kun.png") center no-repeat
+    bottom: -66px
+    right: 2px;
+    z-index: 2
+    -webkit-transform: translate3d(100px,0,0)
+    opacity: 0
+
+  .cake
+    width: 440px
+    height: 640px
+    background: url("../../images/cake.png") center no-repeat
+    background-size: 440px auto
+    bottom: -70px
+    left: -20px
+  
+  &.animated
+    .zhou
+      animate(slideIn, 1s)
+      -webkit-animation-iteration-count: 1
+    .kun
+      animate(slideIn, 1s)
+      -webkit-animation-iteration-count: 1
+

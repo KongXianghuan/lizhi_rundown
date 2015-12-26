@@ -1,0 +1,194 @@
+animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
+	-webkit-animation-name: $name
+	-webkit-animation-duration: $duration
+	-webkit-animation-fill-mode: both
+	-webkit-animation-iteration-count: infinite
+	-webkit-animation-delay: $delay
+	-webkit-transform-origin: $originx $originy
+
+
+//page1
+@-webkit-keyframes shakeHand {
+  from, to {
+    -webkit-transform: rotate(0)
+  }
+  50% {
+    -webkit-transform: rotate(15deg)
+  }
+}
+
+@-webkit-keyframes float {
+	from, to {
+    -webkit-transform: translate3d(0, 0, 0) 
+  }
+  50% {
+    -webkit-transform: translate3d(6px, 6px, 0) 
+  }
+}
+
+@-webkit-keyframes floatUpToDwon
+	from, to
+		-webkit-transform: translate3d(0, 0, 0)
+	50%
+		-webkit-transform: translate3d(0, -5px, 0)
+
+@-webkit-keyframes shakeFoot 
+	from, to
+		-webkit-transform: rotate(0)
+	50%
+		-webkit-transform: rotate(5deg)
+
+@-webkit-keyframes shakeHead {
+  from, to {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  5%, 15%, 35%, 45% {
+    -webkit-transform: translate3d(-5px, 0, 0);
+  }
+  25% {
+  	-webkit-transform: translate3d(-5px, 5px, 0);
+  }
+  10%, 20%, 30%, 40% {
+    -webkit-transform: translate3d(5px, 0, 0);
+  }
+}
+
+@-webkit-keyframes fade
+	from, to
+		opacity: 0
+	50%
+		opacity: 1
+
+@-webkit-keyframes fadeBottomToTop
+	from 
+		opacity: 0
+		-webkit-transform: translateY(50%)
+	to
+		opacity: 1
+		-webkit-transform: translateY(0)
+
+@-webkit-keyframes slideInLeft
+	from 
+		-webkit-transform: translateX(-100px)
+	to
+		-webkit-transform: translateX(0)
+
+@-webkit-keyframes slideInRight
+	from 
+		-webkit-transform: translateX(100px)
+	to
+		-webkit-transform: translateX(0)
+		
+@-webkit-keyframes headDown
+	from
+		-webkit-transform: translate(0, 0)
+	to
+		transform: translate(20px,88px)
+		
+@-webkit-keyframes flip
+	from
+		-webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
+	to
+		-webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(.3);
+
+// page2
+@-webkit-keyframes slideIn
+	to
+		-webkit-transform: translate3d(0,0,0);
+		opacity: 1
+
+// page5
+@-webkit-keyframes rocket 
+	from
+		-webkit-transform: translate(0, 0);
+	50%
+		-webkit-transform: translate(520px, -730px);
+	70%
+		transform: translate(680px, -580px)
+	to
+		-webkit-transform: translate(1300px, -1300px);
+		
+@-webkit-keyframes yan4 
+	from
+		-webkit-transform: translate(0, 0);
+		opacity: 1
+	50%
+		-webkit-transform: translate(520px, -730px);
+		opacity: 1
+	90%
+		-webkit-transform: translate(520px, -730px);
+		opacity: 0
+	to
+		-webkit-transform: translate(520px, -730px);
+		opacity: 0
+
+@-webkit-keyframes yan1
+	from
+		-webkit-transform: translate3d(270px, 0, 0)
+		opacity: 0
+	10%
+		opacity: 1
+	to
+		-webkit-transform: translate3d(0, 0, 0)
+		opacity: 0
+
+@-webkit-keyframes yan2
+	from
+		-webkit-transform: translate3d(0, 0, 0)
+		opacity: 1
+	10%
+		opacity: 1
+	to
+		-webkit-transform: translate3d(0, 0, 0)
+		opacity: 0
+
+@-webkit-keyframes yan3
+	from
+		-webkit-transform: translate3d(-260px, , 0)
+		opacity: 1
+	10%
+		opacity: 1
+	to
+		-webkit-transform: translate3d(0, 0, 0)
+		opacity: 0
+
+// page7
+@-webkit-keyframes xiShakeHand
+	from, to
+		-webkit-transform: rotate(0)
+	75%
+		-webkit-transform: rotate(-30deg)
+
+@-webkit-keyframes car
+	from
+		-webkit-transform: scale(.5) translate(-800px, -220px)
+	to
+		-webkit-transform: scale(1) translate(-50%, 0)
+
+// page9
+@-webkit-keyframes wuLeft
+	from, to
+		-webkit-transform: translateX(0)
+		opacity: 0
+	20%
+		opacity: 1
+	75%
+		-webkit-transform: translateX(-30px)
+		opacity: 1
+
+@-webkit-keyframes wuFade
+	from, to
+		opacity: 0
+	40%
+		-webkit-transform: translateX(-50px)
+		opacity: 1
+
+@-webkit-keyframes wuRight
+	from, to
+		-webkit-transform: translateX(0)
+		opacity: 0
+	20%
+		opacity: 1
+	75%
+		-webkit-transform: translateX(50px)
+		opacity: 1

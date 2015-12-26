@@ -1,0 +1,60 @@
+@import './modules/page1'
+@import './modules/page2'
+@import './modules/page3'
+@import './modules/page4'
+@import './modules/page5'
+@import './modules/page6'
+@import './modules/page7'
+@import './modules/page8'
+@import './modules/page9'
+@import './modules/runway'
+@import './modules/lizhi'
+@import './modules/end'
+
+body, html, .container 
+  width: 100%
+  height: 100%
+  overflow: hidden
+  margin: 0
+  padding: 0
+  background: #031324
+
+div.page.hide
+  display: none
+
+.container
+	position: relative
+
+.scrollWrap
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	-webkit-backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-webkit-transition-property: all
+	-webkit-transition-timing-function: linear
+	&.toLeft
+		-webkit-transform: translate3d(0,0,0) !important
+	&.toRight
+		-webkit-transform: translate3d(-7625px,0,0) !important
+
+.pageWrap
+	white-space: nowrap
+	position: absolute
+	top: 0
+	bottom: 171px
+	left: 0
+	font-size: 0
+	.page 
+		width: 640px
+		display: inline-block
+		vertical-align: top
+		height: 100%
+		position: relative
+		.flag
+			position: absolute
+			left: 50%
+			bottom: -35px
+			z-index: 10
+			-webkit-transform: translateX(-50%)

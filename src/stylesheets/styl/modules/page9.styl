@@ -1,0 +1,79 @@
+#page9
+  .yangshi
+    position: absolute
+    left: 50%
+    bottom: -16px
+    -webkit-transform: translateX(-50%)
+    width: 532px
+    height: 491px
+    background: url("../../images/yangshi.png")
+
+		.title
+			position: absolute
+			width: 477px 
+			height: 244px
+			left: 50%
+			-webkit-transform: translateX(-50%)
+			bottom: 480px
+			background: url("../../images/page9_title.png") center no-repeat
+	
+	.wu
+		position: absolute
+		&.one, &.tow, &.three, &.four
+			width: 640px
+			height: 640px
+			bottom: -1px
+			-webkit-transform: translateY(50%)
+			opacity: 0
+		&.one
+			background: url("../../images/wu1.png") center no-repeat
+		&.two
+			background: url("../../images/wu2.png") center no-repeat
+		&.three
+			background: url("../../images/wu3.png") center no-repeat
+		&.four
+			background: url("../../images/wu4.png") center no-repeat
+		&.five
+			width: 994px
+			height: 956px
+			left: -300px
+			bottom: 0
+			z-index: 2
+			opacity: 0
+			background: url("../../images/wu5.png") center no-repeat
+		&.six
+			width: 809px
+			height: 726px
+			left: -100px
+			bottom: 0
+			z-index: 3
+			opacity: 0
+			background: url("../../images/wu6.png") center no-repeat
+		&.seven
+			width: 1202px
+			height: 697px
+			left: -100px
+			bottom: 0
+			z-index: 4
+			opacity: 0
+			background: url("../../images/wu7.png") center no-repeat
+	
+	&.animated
+		.wu.one
+			animate(fadeBottomToTop, 1s, 50%, 50%)
+			-webkit-animation-iteration-count: 1
+		.wu.two
+			animate(fadeBottomToTop, 1s, 50%, 50%, 5s)
+			-webkit-animation-iteration-count: 1
+		.wu.three
+			animate(fadeBottomToTop, 1s, 50%, 50%, 1.5s)
+			-webkit-animation-iteration-count: 1
+		.wu.four
+			animate(fadeBottomToTop, 1s, 50%, 50%, 2s)
+			-webkit-animation-iteration-count: 1
+		.wu.five
+			animate(wuFade, 20s)
+		.wu.six
+			animate(wuLeft, 15s)
+		.wu.seven
+			animate(wuRight, 18s)

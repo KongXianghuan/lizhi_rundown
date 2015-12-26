@@ -1,0 +1,73 @@
+@import 'animate'
+
+#page4
+	margin-right: 440px
+	> div
+		position: absolute
+	.title
+		width: 390px
+		height: 278px
+		background: url("../../images/page4_title.png") center no-repeat
+		bottom: 520px
+		left: 50%
+		-webkit-transform: translateX(-50%)
+	.page-bg
+		background: url("../../images/page4_bg.png") center no-repeat
+		width: 729px
+		height: 678px 
+		bottom: -48px
+		left: 26px
+	.envelope
+		width: 580px
+		height: 500px
+		bottom: -50px
+		left: 50%
+		-webkit-transform: translateX(-50%)
+		> div
+			position: absolute
+		.envelope-back
+			width: 580px
+			height: 353px
+			background: url("../../images/envelope_back.png") center no-repeat
+			left: 0
+			bottom: 0
+		.envelope-front
+			width: 580px
+			height: 346px
+			background: url("../../images/envelope_front.png") center no-repeat
+			left: 0
+			bottom: 0
+			z-index: 3
+		.envelope-paper
+			width: 478px
+			height: 363px
+			background: url("../../images/paper.png") center no-repeat
+			left: 50%
+			margin-left: -239px
+			bottom: 124px
+		.envelope-stamp-left
+			width: 94px
+			height: 94px
+			background: url("../../images/stamp1.png") center no-repeat
+			bottom: 70px
+			right: 122px
+			z-index: 4
+		.envelope-stamp-right
+			width: 120px
+			height: 100px
+			background: url("../../images/stamp2.png") center no-repeat
+			right: 23px
+			bottom: 86px
+			z-index: 4
+
+	&.animated
+		.envelope-paper
+			animate(flip, 2s, 0, 0)
+
+
+
+
+
+
+
+

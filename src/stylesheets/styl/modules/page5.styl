@@ -1,0 +1,96 @@
+@import 'animate'
+
+#page5
+  margin-right: 500px
+  .title
+    position: absolute
+    left: 50%
+    bottom: 640px
+    width: 586px
+    height: 183px
+    background: url("../../images/page5_title.png")
+    -webkit-transform: translateX(-50%)
+  .page-inner
+    position: absolute
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+  .page-bg
+    position: absolute
+    background: url("../../images/page5_bg.png") center no-repeat
+    width: 1152px
+    height: 511px 
+    bottom: 130px
+    left: -275px
+  .bg
+    position: absolute
+    width: 1403px
+    height: 797px
+    width: 1259px
+    height: 1043px
+    left: -350px
+    bottom: -220px
+    background: url("../../images/arrow.png") center no-repeat
+  .rocket
+    position: absolute
+    left: -360px
+    bottom: -410px
+    width: 393px
+    height: 407px
+    z-index: 5
+    background: url("../../images/rocket.png") center no-repeat
+  .niu
+    position: absolute
+    left: 166px
+    top: 325px
+    width: 328px
+    height: 442px
+    background: url("../../images/niu.png") center no-repeat
+  .yan
+    position: absolute
+    &.one
+      left: -600px
+      bottom: -6px
+      width: 358px
+      height: 204px
+      background: url("../../images/yan1.png") center no-repeat
+      -webkit-transform: translate3d(270px, 0, 0)
+      opacity: 0
+    &.two
+      bottom: -5px
+      left: -320px
+      width: 489px
+      height: 287px
+      background: url("../../images/yan2.png") center no-repeat
+      -webkit-transform: translate3d(0, 0, 0)
+      opacity: 0
+    &.three
+      bottom: -8px
+      left: 100px
+      width: 334px
+      height: 182px
+      background: url("../../images/yan3.png") center no-repeat
+      -webkit-transform: translate3d(-260px, 0, 0)
+      opacity: 0
+    &.four
+      bottom: -1050px
+      left: -1030px
+      width: 845px
+      height: 814px
+      background: url("../../images/yan4.png") center no-repeat
+
+  &.animated
+    .rocket
+      animate(rocket, 3.5s)
+    .yan.one
+      animate(yan1, 3.5s)
+    .yan.two
+      animate(yan2, 3.5s)
+    .yan.three
+      animate(yan3, 3.5s)
+    .yan.four
+      animate(yan4, 3.5s)
+      
+
+

@@ -1,0 +1,45 @@
+@import 'animate'
+
+#page1
+	margin-right: 125px
+	> div
+		position: absolute
+	.title
+		width: 447px
+		height: 339px
+		background: url("../../images/page1_title.png") center no-repeat
+		right: -50px
+		top: 40px
+	.page-bg
+		background: url("../../images/page1_bg.png") center no-repeat
+		width: 786px
+		height: 444px 
+		bottom: -35px
+		left: 15px
+	.bingbing
+		width: 441px
+		height: 604px
+		position: absolute
+		bottom: -22px
+		left: 2px
+		> div
+			position: absolute
+		.bingbing-head
+			width: 441px
+			height: 395px
+			background: url("../../images/bing_head.png") center no-repeat
+			z-index: 2
+			position: absolute
+			left: 0
+			top: 0
+		.bingbing-body
+			width: 214px
+			height: 220px
+			background: url("../../images/bing_body.png") center no-repeat
+			bottom: 0
+			left: 144px
+
+	&.animated
+		.bingbing-head
+			animate(headDown, 1s)
+			-webkit-animation-iteration-count: 1

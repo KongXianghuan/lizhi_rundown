@@ -1,0 +1,66 @@
+@import 'animate'
+
+#page3
+  margin-right: 30px
+  > div
+    position: absolute
+  .page-bg
+    background: url("../../images/page3_bg.png") center no-repeat
+    width: 717px
+    height: 279px 
+    bottom: 0
+    left: 50%
+    -webkit-transform: translateX(-50%)
+  .duang
+    background: url("../../images/duang.png") center no-repeat
+    left: 50%
+    -webkit-transform: translateX(-50%)
+    &:first-child
+      width: 240px
+      height: 58px
+      background-size: 240px auto
+      bottom: 740px
+    &:nth-child(2)
+      width: 316px
+      height: 74px
+      background-size: 316px auto
+      bottom: 654px
+    &:nth-child(3)
+      width: 373px
+      height: 88px
+      background-size: 373px auto
+      bottom: 554px
+  .adv
+    width: 494px
+    height: 616px
+    background: url("../../images/adv.png") center no-repeat
+    bottom: -80px
+    left: 50%
+    margin-left: -247px
+    .cheng-head
+      position: absolute
+    .cheng-body
+      position: absolute
+      width: 476px
+      height: 246px
+      top: 63px
+      left: 7px
+      background: url("../../images/chenglong_body.png") center no-repeat
+    .cheng-head
+      position: absolute
+      width: 165px
+      height: 204px
+      top: 56px
+      left: 150px
+      background: url("../../images/chenglong_head.png") center no-repeat
+  
+  &.animated
+    .cheng-head
+      animate(shakeHead, 1s)
+    .duang
+      &:first-child
+        animate(fade, 2s)
+      &:nth-child(2)
+        animate(fade, 1.5s)
+      &:nth-child(3)
+        animate(fade, 1s)
