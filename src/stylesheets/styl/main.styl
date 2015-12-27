@@ -1,3 +1,4 @@
+@import './modules/loading'
 @import './modules/page1'
 @import './modules/page2'
 @import './modules/page3'
@@ -11,7 +12,7 @@
 @import './modules/lizhi'
 @import './modules/end'
 
-body, html, .container 
+body, html, .container
   width: 100%
   height: 100%
   overflow: hidden
@@ -24,12 +25,16 @@ div.page.hide
 
 .container
 	position: relative
+	-webkit-transition: all 600ms ease
+	&.hide
+		opacity: 0
 
 .scrollWrap
 	position: absolute
 	top: 0
 	bottom: 0
 	left: 0
+	width: 8265px
 	-webkit-backface-visibility: hidden;
 	-webkit-perspective: 1000;
 	-webkit-transition-property: all
@@ -45,13 +50,12 @@ div.page.hide
 	top: 0
 	bottom: 171px
 	left: 0
-	font-size: 0
-	.page 
+	width: 100%
+	.page
 		width: 640px
-		display: inline-block
-		vertical-align: top
 		height: 100%
-		position: relative
+		position: absolute
+		top: 0
 		.flag
 			position: absolute
 			left: 50%

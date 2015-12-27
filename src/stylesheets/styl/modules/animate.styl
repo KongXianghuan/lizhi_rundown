@@ -40,16 +40,16 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 
 @-webkit-keyframes shakeHead {
   from, to {
-    -webkit-transform: translate3d(0, 0, 0);
+    -webkit-transform: translate3d(0, 0, 0)
   }
   5%, 15%, 35%, 45% {
-    -webkit-transform: translate3d(-5px, 0, 0);
+    -webkit-transform: translate3d(-5px, 0, 0)
   }
   25% {
-  	-webkit-transform: translate3d(-5px, 5px, 0);
+  	-webkit-transform: translate3d(-5px, 5px, 0)
   }
   10%, 20%, 30%, 40% {
-    -webkit-transform: translate3d(5px, 0, 0);
+    -webkit-transform: translate3d(5px, 0, 0)
   }
 }
 
@@ -65,7 +65,7 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 		-webkit-transform: translateY(50%)
 	to
 		opacity: 1
-		-webkit-transform: translateY(0)
+		-webkit-transform: translateY(3px)
 
 @-webkit-keyframes slideInLeft
 	from 
@@ -75,51 +75,51 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 
 @-webkit-keyframes slideInRight
 	from 
-		-webkit-transform: translateX(100px)
+		-webkit-transform: translate3d(100px, 0, 0)
 	to
-		-webkit-transform: translateX(0)
+		-webkit-transform: translate3d(0,0,0)
 		
 @-webkit-keyframes headDown
 	from
-		-webkit-transform: translate(0, 0)
+		-webkit-transform: translate3d(0, 0, 0)
 	to
-		transform: translate(20px,88px)
+		-webkit-transform: translate3d(20px,88px, 0)
 		
 @-webkit-keyframes flip
 	from
-		-webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
+		-webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1)
 	to
-		-webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(.3);
+		-webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(.3)
 
 // page2
 @-webkit-keyframes slideIn
 	to
-		-webkit-transform: translate3d(0,0,0);
+		-webkit-transform: translate3d(0,0,0)
 		opacity: 1
 
 // page5
 @-webkit-keyframes rocket 
 	from
-		-webkit-transform: translate(0, 0);
+		-webkit-transform: translate3d(0, 0, 0)
 	50%
-		-webkit-transform: translate(520px, -730px);
+		-webkit-transform: translate3d(520px, -730px, 0)
 	70%
-		transform: translate(680px, -580px)
+		transform: translate3d(680px, -580px, 0)
 	to
-		-webkit-transform: translate(1300px, -1300px);
+		-webkit-transform: translate3d(1300px, -1300px, 0)
 		
 @-webkit-keyframes yan4 
 	from
-		-webkit-transform: translate(0, 0);
+		-webkit-transform: translate3d(0, 0, 0)
 		opacity: 1
 	50%
-		-webkit-transform: translate(520px, -730px);
+		-webkit-transform: translate3d(520px, -730px, 0)
 		opacity: 1
 	90%
-		-webkit-transform: translate(520px, -730px);
+		-webkit-transform: translate3d(520px, -730px, 0)
 		opacity: 0
 	to
-		-webkit-transform: translate(520px, -730px);
+		-webkit-transform: translate3d(520px, -730px, 0)
 		opacity: 0
 
 @-webkit-keyframes yan1
@@ -161,34 +161,34 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 
 @-webkit-keyframes car
 	from
-		-webkit-transform: scale(.5) translate(-800px, -220px)
+		-webkit-transform: scale(.5) translate3d(-800px, -220px, 0)
 	to
-		-webkit-transform: scale(1) translate(-50%, 0)
+		-webkit-transform: scale(1) translate3d(-50%, 0, 0)
 
 // page9
 @-webkit-keyframes wuLeft
 	from, to
-		-webkit-transform: translateX(0)
+		-webkit-transform: translate3d(0, 0, 0)
 		opacity: 0
 	20%
 		opacity: 1
 	75%
-		-webkit-transform: translateX(-30px)
+		-webkit-transform: translate3d(-30px, 0, 0)
 		opacity: 1
 
 @-webkit-keyframes wuFade
 	from, to
 		opacity: 0
 	40%
-		-webkit-transform: translateX(-50px)
+		-webkit-transform: translate3d(-50px, 0, 0)
 		opacity: 1
 
 @-webkit-keyframes wuRight
 	from, to
-		-webkit-transform: translateX(0)
+		-webkit-transform: translate3d(0, 0, 0)
 		opacity: 0
 	20%
 		opacity: 1
 	75%
-		-webkit-transform: translateX(50px)
+		-webkit-transform: translate3d(50px, 0, 0)
 		opacity: 1
