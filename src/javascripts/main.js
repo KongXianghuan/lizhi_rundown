@@ -78,11 +78,9 @@
   load.on('success', function() {
     removeLoading();
   });
-  // setTimeout(function() {
-  //   removeLoading();
-  // }, 3000)
-
-
+  setTimeout(function() {
+    removeLoading();
+  }, 5000);
 
   var app = new Vue({
     el: '.container',
