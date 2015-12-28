@@ -193,8 +193,11 @@
   from {
     -webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
   }
+  70% {
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
+  }
   to {
-    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.3);
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
   }
 }
 @-webkit-keyframes slideIn {
@@ -348,6 +351,7 @@
 }
 #page1 .flag {
   background: url("../../images/flag1.png") center no-repeat;
+  left: 430px;
 }
 #page1 .page-bg {
   background: url("../../images/page1_bg.png") center no-repeat;
@@ -484,8 +488,11 @@
   from {
     -webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
   }
+  70% {
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
+  }
   to {
-    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.3);
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
   }
 }
 @-webkit-keyframes slideIn {
@@ -641,6 +648,7 @@
 }
 #page2 .flag {
   background: url("../../images/flag1.png") center no-repeat;
+  left: 120px;
 }
 #page2 .zhou {
   width: 168px;
@@ -780,8 +788,11 @@
   from {
     -webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
   }
+  70% {
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
+  }
   to {
-    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.3);
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
   }
 }
 @-webkit-keyframes slideIn {
@@ -936,6 +947,7 @@
 }
 #page3 .flag {
   background: url("../../images/flag2.png") center no-repeat;
+  left: 266px;
 }
 #page3 .duang {
   background: url("../../images/duang.png") center no-repeat;
@@ -1111,8 +1123,11 @@
   from {
     -webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
   }
+  70% {
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
+  }
   to {
-    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.3);
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
   }
 }
 @-webkit-keyframes slideIn {
@@ -1326,7 +1341,7 @@
 }
 #page4.animated .envelope-paper {
   -webkit-animation-name: flip;
-  -webkit-animation-duration: 2s;
+  -webkit-animation-duration: 3s;
   -webkit-animation-fill-mode: both;
   -webkit-animation-iteration-count: infinite;
   -webkit-animation-delay: 0;
@@ -1424,8 +1439,11 @@
   from {
     -webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
   }
+  70% {
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
+  }
   to {
-    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.3);
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
   }
 }
 @-webkit-keyframes slideIn {
@@ -1577,7 +1595,7 @@
   -webkit-transform: translateX(-50%);
 }
 #page5 .flag {
-  background: url("../../images/fla6.png") center no-repeat;
+  background: url("../../images/flag6.png") center no-repeat;
 }
 #page5 .page-bg {
   position: absolute;
@@ -1827,8 +1845,11 @@
   from {
     -webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
   }
+  70% {
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
+  }
   to {
-    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.3);
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
   }
 }
 @-webkit-keyframes slideIn {
@@ -2222,8 +2243,11 @@
   from {
     -webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
   }
+  70% {
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
+  }
   to {
-    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.3);
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
   }
 }
 @-webkit-keyframes slideIn {
@@ -2520,8 +2544,11 @@
   from {
     -webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1);
   }
+  70% {
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
+  }
   to {
-    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.3);
+    -webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(0.1);
   }
 }
 @-webkit-keyframes slideIn {
@@ -2676,7 +2703,7 @@
   background: url("../../images/page8_title.png") center no-repeat;
 }
 #page8 .flag {
-  background: url("../../images/fla9.png") center no-repeat;
+  background: url("../../images/flag9.png") center no-repeat;
 }
 #page8 .page-bg {
   background: url("../../images/langya_bg.png") center no-repeat;
@@ -3052,6 +3079,7 @@ div.page.hide {
 .pageWrap .page .flag {
   position: absolute;
   bottom: -45px;
+  left: 260px;
   width: 100px;
   height: 226px;
   z-index: 10;

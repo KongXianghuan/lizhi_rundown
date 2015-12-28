@@ -24,29 +24,28 @@
     './images/envelope_back.png',
     './images/envelope_front.png',
     './images/paper.png',
-    //page5
+    // //page5
     './images/page5_title.png',
-    // './images/page5_bg.png',
+    './images/page5_bg.png',
     './images/rocket.png',
     './images/yan1.png',
     './images/yan2.png',
     './images/yan3.png',
     './images/yan4.png',
-    //page6
+    // //page6
     './images/page6_title.png',
     './images/page6_bg.png',
     './images/star.png',
-    './images/page1_flag.png',
-    //page7
+    // //page7
     './images/page7_title.png',
     './images/page7_bg.png',
     './images/xidada.png',
     './images/xidada_hand.png',
-    //page8
+    // //page8
     './images/page8_title.png',
     './images/langya_bg.png',
     './images/langya.png',
-    //page9
+    // //page9
     './images/yangshi.png',
     './images/page9_title.png',
     './images/wu1.png',
@@ -56,7 +55,7 @@
     './images/wu5.png',
     './images/wu6.png',
     './images/wu7.png',
-    //runway
+    // //runway
     './images/runway_start.png',
     './images/runway_body.png'
   ];
@@ -79,9 +78,9 @@
   load.on('success', function() {
     removeLoading();
   });
-  setTimeout(function() {
-    removeLoading();
-  }, 3000)
+  // setTimeout(function() {
+  //   removeLoading();
+  // }, 3000)
 
 
 

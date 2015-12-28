@@ -88,9 +88,10 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 @-webkit-keyframes flip
 	from
 		-webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1)
+	70%
+		-webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(.1)
 	to
-		-webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(.3)
-
+		-webkit-transform: translate3d(1000px, -1000px, 0) skew(-40deg, -40deg) scale(.1)
 // page2
 @-webkit-keyframes slideIn
 	to
