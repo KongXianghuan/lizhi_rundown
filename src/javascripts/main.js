@@ -1,43 +1,88 @@
 // (function(win, doc, $, Vue) {
   var manifest = [
+    //荔枝logo
     './images/lizhi_logo.png',
     './images/lizhi_shadow.png',
+    //page1
     './images/page1_title.png',
     './images/page1_bg.png',
     './images/bing_head.png',
     './images/bing_body.png',
+    //page2
     './images/page2_title.png',
     './images/zhou.png',
     './images/kun.png',
     './images/cake.png',
+    //paeg3
     './images/page3_bg.png',
     './images/duang.png',
     './images/chenglong_body.png',
-    './images/chenglong_head.png'
+    './images/chenglong_head.png',
+    //paeg4
+    './images/page4_title.png',
+    './images/page4_bg.png',
+    './images/envelope_back.png',
+    './images/envelope_front.png',
+    './images/paper.png',
+    //page5
+    './images/page5_title.png',
+    // './images/page5_bg.png',
+    './images/rocket.png',
+    './images/yan1.png',
+    './images/yan2.png',
+    './images/yan3.png',
+    './images/yan4.png',
+    //page6
+    './images/page6_title.png',
+    './images/page6_bg.png',
+    './images/star.png',
+    './images/page1_flag.png',
+    //page7
+    './images/page7_title.png',
+    './images/page7_bg.png',
+    './images/xidada.png',
+    './images/xidada_hand.png',
+    //page8
+    './images/page8_title.png',
+    './images/langya_bg.png',
+    './images/langya.png',
+    //page9
+    './images/yangshi.png',
+    './images/page9_title.png',
+    './images/wu1.png',
+    './images/wu2.png',
+    './images/wu3.png',
+    './images/wu4.png',
+    './images/wu5.png',
+    './images/wu6.png',
+    './images/wu7.png',
+    //runway
+    './images/runway_start.png',
+    './images/runway_body.png'
   ];
 
-  function loadNum(per) {
-    var end = parseInt(per);
-    var start = parseInt($('.percentage').text());
-    for (;start <= end; start++) {
-      $('.percentage').text(start+'%');
-    }
-  }
-
-  var load = loader(manifest);
-  load.on('progress', function(per) {
-    loadNum(per);
-  });
-  load.on('success', function() {
+  function removeLoading() {
     var $loading = $('.layer-loading');
     var $page = $('.container');
-    loadNum(100);
+    $('.percentage').text('100%');
     $loading.addClass('hide');
     $page.removeClass('hide');
     setTimeout(function() {
       $loading.hide();
     }, 600)
-  })
+  }
+
+  var load = loader(manifest);
+  load.on('progress', function(per) {
+    $('.percentage').text(per+'%');
+  });
+  load.on('success', function() {
+    removeLoading();
+  });
+  setTimeout(function() {
+    removeLoading();
+  }, 3000)
+
 
 
   var app = new Vue({
@@ -57,8 +102,7 @@
     ready: function() {
       var self = this;
       window.addEventListener('deviceorientation', self.setSpeed, false);
-      $('.scrollWrap').on('webkitTransitionEnd', function() { self.stop(); 
-      });
+      $('.scrollWrap').on('webkitTransitionEnd', function() { self.stop(); });
     },
     methods: {
       handelInterval: function() {
@@ -67,7 +111,7 @@
           var currentX = self.getCurrentX();
           if (currentX < -450) { self.currentPage = 1; }
           if (currentX < -1300) { self.currentPage = 2; }
-          if (currentX < -1700) { self.currentPage = 3; }
+          if (currentX < -1500) { self.currentPage = 3; }
           if (currentX < -2800) { self.currentPage = 4; }
           if (currentX < -3500) { self.currentPage = 5; }
           if (currentX < -4360) { self.currentPage = 6; }
@@ -171,10 +215,8 @@
         setTimeout(function() {
           $('.container').addClass('hide');
           $('.end').removeClass('hide');
-          $('.lizhi-logo.run').css({
-            '-webkit-transform': 'rotate(0)'
-          });
-        }, 1000);
+          $('.lizhi-logo.run').css({'-webkit-transform': 'rotate(0)'});
+        }, 3000);
       }
     }
   });
@@ -196,7 +238,40 @@
     app.replay();
   });
 
+  //分享
+  var url = 'http://h5.lizhi.fm/getJSConfig?url=http://h5.lizhi.fm/comp/';
+  $.ajax({
+    url: 'http://h5.lizhi.fm/getJSConfig',
+    data: { url: 'http://h5.lizhi.fm/congra/' },
+    type: 'GET',
+    dataType: 'json',
+    success: function(data) {
+      wx.config({
+        debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+        appId: data.appId, // 必填，公众号的唯一标识
+        timestamp: data.timestamp, // 必填，生成签名的时间戳
+        nonceStr: data.nonceStr, // 必填，生成签名的随机串
+        signature: data.signature, // 必填，签名，见附录1
+        jsApiList: ['onMenuShareTimeline', 'onMenuShareAppMessage', 'showOptionMenu', 'hideOptionMenu'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+      });
+      wx.ready(function () {
+        var shareData = {
+          title: "荔枝FM年度盘点", // 分享标题
+          link: "http://h5.lizhi.fm/congra/", // 分享链接
+          imgUrl: "http://h5.lizhi.fm/congra/images/wx_cover.jpg", // 分享图标
+          desc: ""
+        };
+        wx.onMenuShareTimeline(shareData);
+        wx.onMenuShareAppMessage(shareData);
+      });
+    },
+    error: function() {}
+  });
 
+  $('.music').on('touchend', function(e) {
+    e.preventDefault();
+    $(this).toggleClass('off');
+  });
 
   $('.pos').on('click', function() {
     app.speed = 2;

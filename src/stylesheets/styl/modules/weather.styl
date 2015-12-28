@@ -1,85 +1,34 @@
 .snowy {
     position: absolute
-    left: 0
-    right: 0
+    left: -200px
+    right: 200px
     top: 0
     bottom: 0
     z-index: 10
-    animation: snowy_snow 10s infinite linear
+    -webkit-animation: snowy_snow 10s infinite linear
+    background-color: #000
+    background: 
+        url('../../images/snow5.png') -50px 250px no-repeat
 }
-.snowy:before {
-    content: '';
-    border-radius: 50%;
-    display: block;
-    height: 30px;
-    width: 30px;
-    opacity: 0.8;
-    transform: scale(.9);
-}
-@keyframes snowy_snow {
-    0% {  
+@-webkit-keyframes snowy_snow {
+    0% {
         background: 
-            url('../../images/snow5.png') -20px 250px no-repeat,
-            url('../../images/snow3.png') 50px 10px no-repeat,
-            url('../../images/snow1.png') 180px 400px no-repeat,
-            url('../../images/snow4.png') 330px 20px no-repeat,
-            url('../../images/snow2.png') 380px 50px no-repeat,
-            url('../../images/snow5.png') -20px 550px no-repeat,
-            url('../../images/snow3.png') 50px 610px no-repeat,
-            url('../../images/snow1.png') 180px 700px no-repeat,
-            url('../../images/snow4.png') 330px 400px no-repeat,
-            url('../../images/snow2.png') 380px 450px no-repeat
+            url('../../images/snow5.png') -50px 250px no-repeat
     }
     25% {  
         background: 
-            url('../../images/snow5.png') -20px 250px no-repeat,
-            url('../../images/snow3.png') 50px 10px no-repeat,
-            url('../../images/snow1.png') 180px 400px no-repeat,
-            url('../../images/snow4.png') 330px 20px no-repeat,
-            url('../../images/snow2.png') 380px 50px no-repeat,
-            url('../../images/snow5.png') -20px 550px no-repeat,
-            url('../../images/snow3.png') 50px 610px no-repeat,
-            url('../../images/snow1.png') 180px 700px no-repeat,
-            url('../../images/snow4.png') 330px 400px no-repeat,
-            url('../../images/snow2.png') 380px 450px no-repeat
+            url('../../images/snow5.png') -50px 350px no-repeat
     }
     50% { 
         background: 
-            url('../../images/snow5.png') -20px 250px no-repeat,
-            url('../../images/snow3.png') 50px 10px no-repeat,
-            url('../../images/snow1.png') 180px 400px no-repeat,
-            url('../../images/snow4.png') 330px 20px no-repeat,
-            url('../../images/snow2.png') 380px 50px no-repeat,
-            url('../../images/snow5.png') -20px 550px no-repeat,
-            url('../../images/snow3.png') 50px 610px no-repeat,
-            url('../../images/snow1.png') 180px 700px no-repeat,
-            url('../../images/snow4.png') 330px 400px no-repeat,
-            url('../../images/snow2.png') 380px 450px no-repeat
+            url('../../images/snow5.png') -50px 250px no-repeat
     }
     75% {
         background: 
-            url('../../images/snow5.png') -20px 250px no-repeat,
-            url('../../images/snow3.png') 50px 10px no-repeat,
-            url('../../images/snow1.png') 180px 400px no-repeat,
-            url('../../images/snow4.png') 330px 20px no-repeat,
-            url('../../images/snow2.png') 380px 50px no-repeat,
-            url('../../images/snow5.png') -20px 550px no-repeat,
-            url('../../images/snow3.png') 50px 610px no-repeat,
-            url('../../images/snow1.png') 180px 700px no-repeat,
-            url('../../images/snow4.png') 330px 400px no-repeat,
-            url('../../images/snow2.png') 380px 450px no-repeat
+            url('../../images/snow5.png') -50px 250px no-repeat
     }
     100% {
         background: 
-            url('../../images/snow5.png') -20px 250px no-repeat,
-            url('../../images/snow3.png') 50px 10px no-repeat,
-            url('../../images/snow1.png') 180px 400px no-repeat,
-            url('../../images/snow4.png') 330px 20px no-repeat,
-            url('../../images/snow2.png') 380px 50px no-repeat,
-            url('../../images/snow5.png') -20px 550px no-repeat,
-            url('../../images/snow3.png') 50px 610px no-repeat,
-            url('../../images/snow1.png') 180px 700px no-repeat,
-            url('../../images/snow4.png') 330px 400px no-repeat,
-            url('../../images/snow2.png') 380px 450px no-repeat
+            url('../../images/snow5.png') -10px 250px no-repeat
     }
 }

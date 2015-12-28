@@ -1,18 +1,19 @@
 @import 'animate'
-@import 'weather'
 
 #page8
-	margin-right: 300px
 	left: 6685px
+	z-index: 10
 	> div
 		position: absolute
 	.title
-		width: 338px 
-		height: 213px
+		width: 408px 
+		height: 218px
 		left: 50%
 		-webkit-transform: translateX(-50%)
 		bottom: 610px
 		background: url("../../images/page8_title.png") center no-repeat
+	.flag
+		background: url("../../images/fla9.png") center no-repeat
 	.page-bg
 		background: url("../../images/langya_bg.png") center no-repeat
 		width: 1043px
@@ -20,6 +21,20 @@
 		left: 50%
 		bottom: -220px
 		-webkit-transform: translateX(-50%)
+	.snow
+		width: 641px
+		height: 756px
+		background: url("../../images/snow.png") center no-repeat
+		z-index: 10
+		-webkit-transform: translate3d(0,-100%,0)
+		animate(falldown, 10s)
+	.yinghua
+		width: 564px
+		height: 810px
+		background: url("../../images/yinghua.png") center no-repeat
+		z-index: 12
+		-webkit-transform: translate3d(0,-100%,0)
+		animate(falldown, 8s)
 	.langya
 		width: 636px
 		height: 652px
@@ -35,20 +50,4 @@
 			width: 100%
 			height: 100%
 			background: url("../../images/langya.png") center no-repeat
-		.langya-front
-			position: absolute
-			left: 10px
-			top: 236px
-			z-index: 3
-			width: 170px
-			height: 126px
-			background: url("../../images/langya_front.png")
-		.langya-back
-			position: absolute
-			left: 0
-			top: 272px
-			z-index: 1
-			width: 353px 
-			height: 399px
-			background: url("../../images/langya_back.png")
 

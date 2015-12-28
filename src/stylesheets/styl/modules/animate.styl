@@ -165,10 +165,17 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 	to
 		-webkit-transform: scale(1) translate3d(-50%, 0, 0)
 
+// page8
+@-webkit-keyframes falldown
+	from
+		-webkit-transform: translate3d(0,-100%,0)
+	to
+		-webkit-transform: translate3d(0,50%,0)
+
 // page9
 @-webkit-keyframes wuLeft
 	from, to
-		-webkit-transform: translate3d(0, 0, 0)
+		-webkit-transform: translate3d(0, 50%, 0)
 		opacity: 0
 	20%
 		opacity: 1
