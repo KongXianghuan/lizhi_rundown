@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="format-detection" content="telephone=no, email=no">
-  <title>荔枝FM年度总结</title>
+  <title>荔枝FM非官方年度盘点</title>
   <link rel="stylesheet" type="text/css" href="./stylesheets/css/main.css">
   <style>
     body, html, .container { width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; }
@@ -27,23 +27,27 @@
 <body>
   <div class="layer-loading">
     <div class="lizhi">
-      <div class="lizhi-logo"></div>
+      <div class="lizhi-logo animated"></div>
       <div class="percentage">0%</div>
+      <div class="loading-text">努力滚动中</div>
     </div>
   </div>
-  <div class="music"></div>
+  <div class="music">
+    <audio id="bgm" autoplay loop src="./audios/bgm.mp3"></audio>
+  </div>
+  <div class="guide">
+    <div class="tip">
+      <div class="tip-phone"></div>
+      <div class="tip-arrow"></div>
+      <div class="tip-text"></div>
+    </div>
+  </div>
   <div class="container hide">
     <div class="scrollWrap">
-      <div class="guide">
-        <div class="title"></div>
-        <div class="tip">
-          <div class="tip-phone"></div>
-          <div class="tip-arrow"></div>
-          <div class="tip-text"></div>
-        </div>
-      </div>
       <div class="pageWrap">
-        <div id="page0" class="page"></div>
+        <div id="page0" class="page">
+          <div class="title"></div>
+        </div>
         <div id="page1" class="page">
           <div class="title"></div>
           <div class="flag"></div>
@@ -56,7 +60,6 @@
         
         <div id="page2" class="page">
           <div class="title"></div>
-          <div class="flag"></div>
           <div class="zhou"></div>
           <div class="kun"></div>
           <div class="cake"></div>
@@ -135,7 +138,6 @@
         <div id="page8" class="page">
           <div class="title"></div>
           <div class="page-bg"></div>
-          <div class="flag"></div>
           <div class="snow"></div>
           <div class="yinghua"></div>
           <div class="langya">
@@ -177,8 +179,8 @@
       <div class="lizhi-shadow"></div>
     </div>
     <div class="btn-group">
-      <a class="left" href="javascript:;"></a>
-      <a class="right" id="replay" href="javascript:;"></a>
+      <a class="left" id="replay" href="javascript:;"></a>
+      <a class="right" href="javascript:;"></a>
     </div>
   </div>
   

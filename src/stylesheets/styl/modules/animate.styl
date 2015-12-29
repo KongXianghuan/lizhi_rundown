@@ -6,6 +6,13 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 	-webkit-animation-delay: $delay
 	-webkit-transform-origin: $originx $originy
 
+//loading
+@-webkit-keyframes rotate
+	from
+		-webkit-transform: rotate(0)
+	to
+		-webkit-transform: rotate(360deg)
+
 
 //page1
 @-webkit-keyframes shakeHand {
@@ -82,9 +89,11 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 @-webkit-keyframes headDown
 	from
 		-webkit-transform: translate3d(0, 0, 0)
-	to
+	25%
 		-webkit-transform: translate3d(20px,88px, 0)
-		
+	to
+		-webkit-transform: translate3d(0, 0, 0)
+
 @-webkit-keyframes flip
 	from
 		-webkit-transform: translate3d(0, 0, 0) skew(0, 0) scale(1)
@@ -164,7 +173,7 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 	from
 		-webkit-transform: scale(.5) translate3d(-800px, -220px, 0)
 	to
-		-webkit-transform: scale(1) translate3d(-50%, 0, 0)
+		-webkit-transform: scale(1) translate3d(-254px, 0, 0)
 
 // page8
 @-webkit-keyframes falldown
@@ -200,3 +209,9 @@ animate($name, $duration, $originx=50%, $originy=50%, $delay=0)
 	75%
 		-webkit-transform: translate3d(50px, 0, 0)
 		opacity: 1
+
+@-webkit-keyframes tipOut
+	from
+		opacity: 1
+	to
+		opacity: 0

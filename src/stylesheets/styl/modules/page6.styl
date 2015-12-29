@@ -2,116 +2,116 @@
 @import 'animate'
 
 #page6
-	left: 5005px
-	.title
-		position: absolute
-		top: 60px
-		left: 20px
-		width: 429px 
-		height: 244px
-		background: url("../../images/page6_title.png") no-repeat center
-	.flag
-		background: url("../../images/flag7.png") center no-repeat
-	.page-bg
-		position: absolute
-		left: -100px
-		bottom: 20px
-		width: 747px
-		height: 934px
-		background: url("../../images/page6_bg.png") center no-repeat
-	.earth
-		position: absolute
+  left: 5005px
+  .title
+    position: absolute
+    bottom: 550px
+    left: -50px
+    width: 429px
+    height: 244px
+    background: url("../../images/page6_title.png") no-repeat center
+  .flag
+    background: url("../../images/flag7.png") center no-repeat
+    left: -130px
+  .page-bg
+    position: absolute
+    left: -100px
+    bottom: 20px
+    width: 747px
+    height: 934px
+    background: url("../../images/page6_bg.png") center no-repeat
+  .earth
+    position: absolute
+  .star
+    background: url("../../images/star.png")
+    background-size: cover
+    position: absolute
+    &.first
+      width: 25px
+      height: 25px
+      top: 37px
+      left: 255px
+    &.second
+      width: 40px
+      height: 40px
+      top: 550px
+      left: 350px
+    &.third
+      width: 24px
+      height: 24px
+      top: 770px
+      left: 370px
+    &.fourth
+      width: 24px
+      height: 24px
+      bottom: 5px
+      right: 25px
 
-	.star
-		background: url("../../images/star.png")
-		background-size: cover
-		position: absolute
-		&.first
-			width: 25px
-			height: 25px
-			top: 37px
-			left: 255px
-		&.second
-			width: 40px
-			height: 40px
-			top: 550px
-			left: 350px
-		&.third
-			width: 24px
-			height: 24px
-			top: 770px
-			left: 370px
-		&.fourth
-			width: 24px
-			height: 24px
-			bottom: 5px
-			right: 25px
+  #earth1
+    right: -60px
+    bottom: 500px
 
-	#earth1
-		top: 134px
-		right: -60px
+    > div
+      position: absolute
+      &.icon-earth1_body
+        position: relative
+        z-index: 2
+    .icon-earth1_face
+      top: 136px
+      left: 15px
+      z-index: 3
+    .icon-earth1_right_hand
+      top: 142px
+      left: 194px
+      z-index: 3
+    .icon-earth1_left_hand
+      top: 80px
+      left: -24px
+      z-index: 3
+    .icon-earth1_right_foot
+      top: 267px
+      left: 183px
+      z-index: 3
+    .icon-earth1_left_foot
+      top: 290px
+      left: 112px
 
-		> div
-			position: absolute
-			&.icon-earth1_body
-				position: relative
-				z-index: 2
-		.icon-earth1_face
-			top: 136px
-			left: 15px
-			z-index: 3
-		.icon-earth1_right_hand
-			top: 142px
-			left: 194px
-			z-index: 3
-		.icon-earth1_left_hand
-			top: 80px
-			left: -24px
-			z-index: 3
-		.icon-earth1_right_foot
-			top: 267px
-			left: 183px
-			z-index: 3
-		.icon-earth1_left_foot
-			top: 290px
-			left: 112px
-	
-	#earth2
-		top: 428px
-		left: -124px
+  #earth2
+    left: -124px
+    bottom: 0
 
-		> div
-			position: absolute
-			&.icon-earth2_body
-				position: relative
-				z-index: 2
-		.icon-earth2_right_hand
-			top: 176px
-			right: -216px
-			z-index: 3
-		.icon-earth2_right_foot
-			top: 464px
-			left: 105px
-			z-index: 3
-		.icon-earth2_left_foot
-			top: 410px
-			left: 32px
+    > div
+      position: absolute
+      &.icon-earth2_body
+        position: relative
+        z-index: 2
+    .icon-earth2_right_hand
+      top: 176px
+      right: -216px
+      z-index: 3
+    .icon-earth2_right_foot
+      top: 464px
+      left: 105px
+      z-index: 3
+    .icon-earth2_left_foot
+      top: 410px
+      left: 32px
 
-	&.animated
-		#earth1
-			animate(float, 4s, 60%, 60%, 1s)
-			.icon-earth1_face
-				animate(floatUpToDwon, 4s, 50%, 50%, 1s)
-			.icon-earth1_right_foot
-				animate(shakeFoot, 4s, 50%, 0, 1s)
-			.icon-earth1_left_foot
-				animate(shakeFoot, 4s, 50%, 0, 1s)
+  &.animated
+    #earth1
+      animate(float, 4s, 60%, 60%, 1s)
+      .icon-earth1_face
+        animate(floatUpToDwon, 4s, 50%, 50%, 1s)
+      .icon-earth1_right_foot
+        animate(shakeFoot, 4s, 50%, 0, 1s)
+      .icon-earth1_left_foot
+        animate(shakeFoot, 4s, 50%, 0, 1s)
 
-		#earth2
-			z-index: 1
-			animate(float, 4s)
-			.icon-earth2_right_hand
-				animate(shakeHand, 4s, 0, 100%)
-			
+    #earth2
+      z-index: 1
+      animate(float, 4s)
+      .icon-earth2_right_hand
+        animate(shakeHand, 4s, 0, 100%)
+
 
 

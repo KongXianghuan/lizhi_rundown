@@ -1,19 +1,16 @@
+@import 'animate'
+
 .guide
 	position: absolute
 	width: 640px
 	height: 100%
 	left: 0
 	top: 0
-	z-index: 100
+	z-index: 80
 	background: rgba(0,0,0,.5)
-	.title
-		width: 519px
-		height: 266px
-		background: url("../../images/guide_title.png") center no-repeat
-		position: absolute
-		left: 50%
-		-webkit-transform: translateX(-50%)
-		top: 160px
+	-webkit-transition: all 300ms ease
+	&.hide
+		opacity: 0
 	.tip
 		width: 264px
 		height: 200px
@@ -23,10 +20,13 @@
 		-webkit-transform: translateX(-50%)
 		> div
 			position: absolute
+		&.hide
+			animate(tipOut, 1s)
+			-webkit-animation-iteration-count: 1
 		.tip-arrow
 			width: 57px
 			height: 25px
-			top: 34px
+			top: 40px
 			left: 136px
 			background: url("../../images/guide_arrow.png") center no-repeat
 		.tip-text
@@ -35,18 +35,12 @@
 			background: url("../../images/guide_text.png") center no-repeat
 			bottom: 0
 		.tip-phone
-			width: 64px
+			width: 60px
 			height: 100px
 			top: 0
 			left: 50%
-			background: url("../../images/phone.png") center no-repeat
-			background-size: 64px 100px
+			background: url("../../images/phone2.png") center no-repeat
+			background-size: 60px 100px
 			margin-left: -32px
-	
 
 
-
-
-
-
-			

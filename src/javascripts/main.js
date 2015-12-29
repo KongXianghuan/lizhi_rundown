@@ -1,5 +1,7 @@
 // (function(win, doc, $, Vue) {
   var manifest = [
+    //bgm
+    './audios/bgm.mp3',
     //荔枝logo
     './images/lizhi_logo.png',
     './images/lizhi_shadow.png',
@@ -86,7 +88,7 @@
     el: '.container',
     data: {
       speed: 0,
-      translateDuration: 35000,
+      translateDuration: 38000,
       rotateDuration: 2500,
       currentPage: 0,
       scrollEl: $('.scrollWrap'),
@@ -109,8 +111,8 @@
           if (currentX < -450) { self.currentPage = 1; }
           if (currentX < -1300) { self.currentPage = 2; }
           if (currentX < -1500) { self.currentPage = 3; }
-          if (currentX < -2800) { self.currentPage = 4; }
-          if (currentX < -3500) { self.currentPage = 5; }
+          if (currentX < -2900) { self.currentPage = 4; }
+          if (currentX < -3600) { self.currentPage = 5; }
           if (currentX < -4360) { self.currentPage = 6; }
           if (currentX < -5400) { self.currentPage = 7; }
           if (currentX < -6400) { self.currentPage = 8; }
@@ -173,6 +175,7 @@
         var direction = self.speed > 0 ? 'toRight' : 'toLeft';
         if (self.speed > 0) {
           duration = (self.runwayLen - Math.abs(parseInt(currentX)))/self.runwayLen*self.translateDuration/1000;
+          $(self.scrollEl).find('.guide').addClass('hide').find('.tip').addClass('hide');
         } else if ( self.speed < 0) {
           duration = (Math.abs(parseInt(currentX)))/self.runwayLen*self.translateDuration/1000;
         }
@@ -231,8 +234,34 @@
     this.toggleShow();
   });
 
-  $('#replay').on('touchend', function() {
-    app.replay();
+  $(function() {
+    if ($(window).height() < 960) {
+      $('.page').addClass('scale');
+    }
+
+    $('#replay').on('touchend', function() {
+      app.replay();
+    });
+
+    $('.guide').on('touchend', function(e) {
+      e.preventDefault();
+      $(this).addClass('hide');
+      $('#bgm')[0].play();
+      setTimeout(function() {
+        $(this).hide();
+      }, 300);
+    });
+
+    $('.music').on('touchend', function(e) {
+      e.preventDefault();
+      $(this).toggleClass('off');
+      var audio = $('#bgm')[0];
+      if ($(this).hasClass('off')) {
+        audio.pause();
+      } else {
+        audio.play();
+      }
+    });
   });
 
   //分享
@@ -264,26 +293,6 @@
     },
     error: function() {}
   });
-
-  $('.music').on('touchend', function(e) {
-    e.preventDefault();
-    $(this).toggleClass('off');
-  });
-
-  $('.pos').on('click', function() {
-    app.speed = 2;
-  });
-
-  $('.pos2').on('click', function() {
-    app.stop();
-  });
-
-  $('.pos3').on('click', function() {
-    $('.page').toggleClass('animated');
-  });
-
-
-
 
 
 // })(window, document, Zepto, Vue);

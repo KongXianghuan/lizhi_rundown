@@ -1,3 +1,5 @@
+@import 'animate'
+
 .layer-loading
 	position: fixed
 	top: 0
@@ -5,7 +7,7 @@
 	right: 0
 	bottom: 0
 	background: #f9f8f3
-	z-index: 20
+	z-index: 100
 	-webkit-transition: all 600ms ease-in
 
 	&.hide
@@ -16,7 +18,7 @@
 		width: 132px
 		height: 152px
 		left: 320px
-		top: 50%
+		top: 47%
 		-webkit-transform: translate3d(-50%,-50%,0)
 		z-index: 30
 
@@ -30,6 +32,8 @@
 			-webkit-transform-origin: 66px 74px
 			background: url("../../images/lizhi_logo.png") center no-repeat
 			-webkit-transform: transalte3d(0,0,0)
+			&.animated
+				animate(rotate, 2s, 50%, 56%)
 
 		.lizhi-shadow
 			position: absolute
@@ -44,6 +48,16 @@
 			position: absolute
 			left: 0
 			bottom: -60px
+			width: 132px
+			text-align: center
+			font-size: 20px
+			color: #666
+			line-height: 40px
+
+		.loading-text
+			position: absolute
+			left: 0
+			bottom: -90px
 			width: 132px
 			text-align: center
 			font-size: 20px
