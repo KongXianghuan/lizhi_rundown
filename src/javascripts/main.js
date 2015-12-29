@@ -88,7 +88,7 @@
     el: '#rundown',
     data: {
       speed: 0,
-      translateDuration: 38000,
+      translateDuration: 40000,
       rotateDuration: 2500,
       currentPage: 0,
       scrollEl: $('.scrollWrap'),
