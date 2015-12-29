@@ -85,7 +85,7 @@
   }, 5000);
 
   var app = new Vue({
-    el: '.container',
+    el: '#rundown',
     data: {
       speed: 0,
       translateDuration: 38000,
@@ -95,11 +95,13 @@
       scrollX: '',
       runwayLen: parseInt($('.pageWrap').css('width')) - 640,
       interval: 0,
-      canRun: true,
-      lizhi: $('.run .lizhi-logo')
+      canRun: false,
+      lizhi: $('.run .lizhi-logo'),
+      bgm: true
     },
     ready: function() {
       var self = this;
+      if ($(window).height() < 960) { $('.page').addClass('scale'); }
       window.addEventListener('deviceorientation', self.setSpeed, false);
       $('.scrollWrap').on('webkitTransitionEnd', function() { self.stop(); });
     },
@@ -121,6 +123,7 @@
         }, 500);
       },
       setSpeed: function(e) {
+        if (!this.canRun) return;
         var x = parseInt(e.gamma / 10);
         if (x > 0) {
           this.speed = 1;
@@ -138,7 +141,6 @@
       },
       rotate: function() {
         var self = this;
-
         var currentX = self.getCurrentX();
         if (self.speed < 0 && currentX == 0) return;
         if (self.speed > 0 && currentX == self.runwayLen) return;
@@ -193,7 +195,6 @@
         $(self.lizhi).velocity('stop', true);
         clearInterval(self.interval);
         if (currentX == self.runwayLen) { self.end(); }
-        console.log('stop');
       },
       toggleShow: function() {
         var self = this;
@@ -212,11 +213,22 @@
         window.location.reload();
       },
       end: function() {
-        setTimeout(function() {
-          $('.container').addClass('hide');
-          $('.end').removeClass('hide');
-          $('.lizhi-logo.run').css({'-webkit-transform': 'rotate(0)'});
-        }, 3000);
+        $('.container').addClass('hide');
+        $('.end').removeClass('hide');
+      },
+      start: function() {
+        this.canRun = true;
+        $('.guide').addClass('hide');
+        $('#bgm')[0].play();
+      },
+      toggleBGM: function() {
+        this.bgm = !this.bgm;
+        var audio = $('#bgm')[0];
+        if (this.bgm) {
+          audio.play();
+        } else {
+          audio.pause();
+        }
       }
     }
   });
@@ -232,36 +244,6 @@
 
   app.$watch('currentPage', function() {
     this.toggleShow();
-  });
-
-  $(function() {
-    if ($(window).height() < 960) {
-      $('.page').addClass('scale');
-    }
-
-    $('#replay').on('touchend', function() {
-      app.replay();
-    });
-
-    $('.guide').on('touchend', function(e) {
-      e.preventDefault();
-      $(this).addClass('hide');
-      $('#bgm')[0].play();
-      setTimeout(function() {
-        $(this).hide();
-      }, 300);
-    });
-
-    $('.music').on('touchend', function(e) {
-      e.preventDefault();
-      $(this).toggleClass('off');
-      var audio = $('#bgm')[0];
-      if ($(this).hasClass('off')) {
-        audio.pause();
-      } else {
-        audio.play();
-      }
-    });
   });
 
   //分享

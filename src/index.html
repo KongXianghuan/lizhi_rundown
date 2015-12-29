@@ -24,7 +24,7 @@
   </script>
 </head>
 
-<body>
+<body id="rundown">
   <div class="layer-loading">
     <div class="lizhi">
       <div class="lizhi-logo animated"></div>
@@ -32,14 +32,17 @@
       <div class="loading-text">努力滚动中</div>
     </div>
   </div>
-  <div class="music">
+  <div class="music" :class="{'off': !bgm}" @touchend="toggleBGM">
     <audio id="bgm" autoplay loop src="./audios/bgm.mp3"></audio>
   </div>
   <div class="guide">
     <div class="tip">
       <div class="tip-phone"></div>
       <div class="tip-arrow"></div>
-      <div class="tip-text"></div>
+      <div class="tip-text">
+        <p>点击荔枝后向右倾斜屏幕</p>
+        <p>让荔枝翻滚起来！</p>
+      </div>
     </div>
   </div>
   <div class="container hide">
@@ -162,7 +165,7 @@
       <div class="runway"></div>
     </div>
 
-    <div class="lizhi run">
+    <div class="lizhi run" @touchend="start">
       <div class="lizhi-logo"></div>
       <div class="lizhi-shadow"></div>
     </div>
@@ -179,7 +182,7 @@
       <div class="lizhi-shadow"></div>
     </div>
     <div class="btn-group">
-      <a class="left" id="replay" href="javascript:;"></a>
+      <a class="left" href="javascript:;" @touchend="replay"></a>
       <a class="right" href="javascript:;"></a>
     </div>
   </div>

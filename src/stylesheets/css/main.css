@@ -582,7 +582,7 @@
   height: 100%;
   left: 0;
   top: 0;
-  z-index: 80;
+  z-index: 20;
   background: rgba(0,0,0,0.5);
   -webkit-transition: all 300ms ease;
 }
@@ -590,10 +590,10 @@
   opacity: 0;
 }
 .guide .tip {
-  width: 264px;
+  width: 320px;
   height: 200px;
   position: absolute;
-  bottom: 230px;
+  bottom: 240px;
   left: 50%;
   -webkit-transform: translateX(-50%);
 }
@@ -613,14 +613,24 @@
   width: 57px;
   height: 25px;
   top: 40px;
-  left: 136px;
+  left: 160px;
   background: url("../../images/guide_arrow.png") center no-repeat;
 }
 .guide .tip .tip-text {
-  width: 264px;
-  height: 65px;
-  background: url("../../images/guide_text.png") center no-repeat;
+  width: 100%;
   bottom: 0;
+}
+.guide .tip .tip-text p {
+  text-align: center;
+  color: #fff;
+  font-size: 22px;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 5px;
+}
+.guide .tip .tip-text p:last-child {
+  margin-top: 20px;
+  text-indent: 26px;
 }
 .guide .tip .tip-phone {
   width: 60px;
@@ -3504,7 +3514,7 @@
 #page9 .wu.seven {
   width: 1202px;
   height: 697px;
-  left: -100px;
+  left: -400px;
   bottom: 0;
   z-index: 4;
   opacity: 0;
@@ -3574,7 +3584,7 @@
   position: absolute;
   bottom: 0;
   z-index: 10;
-  width: 8265px;
+  width: 8905px;
   height: 171px;
   background: url("../../images/runway_start.png") 0 0 no-repeat, url("../../images/runway_body.png") 156px 0 repeat-x;
   -webkit-transform: translate3d(0, 0, 10px);
@@ -3620,7 +3630,7 @@
   height: 1138px;
   z-index: 50;
   background: url("../../images/end_bg.jpg") center bottom no-repeat;
-  -webkit-transition: all 600ms ease;
+  -webkit-transition: all 2s ease;
 }
 .end.hide {
   z-index: -10;
@@ -3696,6 +3706,11 @@ html,
   padding: 0;
   background: #031324;
 }
+body,
+div,
+p {
+  font-family: Helvetica, Arial, "Microsoft Yahei", FreeSans, Arimo, "Droid Sans", "wenquanyi micro hei", "Hiragino Sans GB", "Hiragino Sans GB W3", sans-serif;
+}
 div.page.hide {
   display: none;
 }
@@ -3723,7 +3738,7 @@ div.page.hide {
   top: 0;
   bottom: 0;
   left: 0;
-  width: 8265px;
+  width: 8905px;
   -webkit-backface-visibility: hidden;
   -webkit-perspective: 1000;
   -webkit-transition-property: all;
@@ -3734,7 +3749,7 @@ div.page.hide {
   -webkit-transform: translate3d(0, 0, 0) !important;
 }
 .scrollWrap.toRight {
-  -webkit-transform: translate3d(-7625px, 0, 0) !important;
+  -webkit-transform: translate3d(-8265px, 0, 0) !important;
 }
 .pageWrap {
   white-space: nowrap;
