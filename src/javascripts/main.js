@@ -218,6 +218,7 @@
       },
       start: function() {
         this.canRun = true;
+        this.bgm = true;
         $('.guide').addClass('hide');
         $('#bgm')[0].play();
       },
