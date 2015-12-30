@@ -9,6 +9,15 @@
 	bottom: 0
 	-webkit-transition: all 2s ease
 	overflow: hidden
+	.end-inner
+		width: 640px
+		height: 880px
+		position: absolute
+		left: 50%
+		bottom: 170px
+		margin: 0 0 0 -320px
+		&.scale
+			-webkit-transform: scale(.8)
 	.end-wrap
 		position: absolute
 		left: 0
@@ -25,7 +34,7 @@
 			height: 232px
 			background: url("../../images/end_title.png") center no-repeat
 			position: absolute
-			bottom: 770px
+			top: 0
 			left: 50%
 			-webkit-transform: translateX(-50%)
 		.lizhi
@@ -33,7 +42,7 @@
 			width: 190px
 			height: 220px
 			left: 228px
-			bottom: 260px
+			bottom: 150px
 			.lizhi-logo
 				position: absolute
 				top: 0
@@ -55,8 +64,8 @@
 
 		.btn-group
 			position: absolute
-			bottom: 132px
 			left: 0
+			bottom: 0
 			width: 100%
 			height: 66px
 			font-size: 0
@@ -72,7 +81,14 @@
 				background: url("../../images/end_btn_right.png") center no-repeat
 				margin-left: 28px
 				
-			
+	.download
+		position: absolute
+		bottom: -2px
+		left: 0
+		z-index: 50
+		width: 100%
+		height: 122px
+		background: url("../../images/download.png") center no-repeat
 
 
 

@@ -7,6 +7,15 @@
   <title>滚动吧，荔枝君</title>
   <link rel="stylesheet" type="text/css" href="./stylesheets/css/main.css">
   <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?b71a492bd705278fa8cedcbf7c23a53d";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+  <script>
     if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
       var version = parseFloat(RegExp.$1);
       if(version>2.3){
@@ -182,16 +191,19 @@
 
   <div class="end" :class="{'hide': !isEnd}">
     <div class="end-wrap">
-      <div class="title"></div>
-      <div class="lizhi">
-        <div class="lizhi-logo"></div>
-        <div class="lizhi-shadow"></div>
-      </div>
-      <div class="btn-group">
-        <a class="left" href="javascript:;" @touchend="replay"></a>
-        <a class="right" href="javascript:;" @touchend="toggleShareLayer"></a>
+      <div class="end-inner">
+        <div class="title"></div>
+        <div class="lizhi">
+          <div class="lizhi-logo"></div>
+          <div class="lizhi-shadow"></div>
+        </div>
+        <div class="btn-group">
+          <a class="left" href="javascript:;" @touchend="replay"></a>
+          <a class="right" href="javascript:;" @touchend="toggleShareLayer"></a>
+        </div>
       </div>
     </div>
+    <a class="download" target="_blank" href="http://a.app.qq.com/o/simple.jsp?pkgname=com.yibasan.lizhifm&amp;g_f=991784#opened"></a>
   </div>
 
   <div v-if="shareLayer" @touchend="toggleShareLayer" transition="fade" class="share-layer"></div>
@@ -203,15 +215,6 @@
   <script src="./javascripts/components/Loader.js"></script>
   <script src="./javascripts/main.js"></script>
 
-  <script>
-    var _hmt = _hmt || [];
-    (function() {
-      var hm = document.createElement("script");
-      hm.src = "//hm.baidu.com/hm.js?b71a492bd705278fa8cedcbf7c23a53d";
-      var s = document.getElementsByTagName("script")[0]; 
-      s.parentNode.insertBefore(hm, s);
-    })();
-  </script>
 </body>
 
 </html>

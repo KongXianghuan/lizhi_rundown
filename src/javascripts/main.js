@@ -70,7 +70,7 @@
     $page.removeClass('hide');
     setTimeout(function() {
       $loading.hide();
-    }, 600)
+    }, 5000)
   }
 
   var load = loader(manifest);
@@ -104,7 +104,10 @@
     },
     ready: function() {
       var self = this;
-      if ($(window).height() < 960) { $('.page').addClass('scale'); }
+      if ($(window).height() < 960) { 
+        $('.page').addClass('scale');
+        $('.end-inner').addClass('scale');
+      }
       window.addEventListener('deviceorientation', self.setSpeed, false);
       $('.scrollWrap').on('webkitTransitionEnd', function() { self.stop(); });
       self.audio.addEventListener('ended', function() {

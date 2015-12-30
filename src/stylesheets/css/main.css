@@ -3700,6 +3700,17 @@
   z-index: -10;
   opacity: 0;
 }
+.end .end-inner {
+  width: 640px;
+  height: 880px;
+  position: absolute;
+  left: 50%;
+  bottom: 170px;
+  margin: 0 0 0 -320px;
+}
+.end .end-inner.scale {
+  -webkit-transform: scale(0.8);
+}
 .end .end-wrap {
   position: absolute;
   left: 0;
@@ -3718,7 +3729,7 @@
   height: 232px;
   background: url("../../images/end_title.png") center no-repeat;
   position: absolute;
-  bottom: 770px;
+  top: 0;
   left: 50%;
   -webkit-transform: translateX(-50%);
 }
@@ -3727,7 +3738,7 @@
   width: 190px;
   height: 220px;
   left: 228px;
-  bottom: 260px;
+  bottom: 150px;
 }
 .end .end-wrap .lizhi .lizhi-logo {
   position: absolute;
@@ -3750,8 +3761,8 @@
 }
 .end .end-wrap .btn-group {
   position: absolute;
-  bottom: 132px;
   left: 0;
+  bottom: 0;
   width: 100%;
   height: 66px;
   font-size: 0;
@@ -3769,6 +3780,15 @@
 .end .end-wrap .btn-group .right {
   background: url("../../images/end_btn_right.png") center no-repeat;
   margin-left: 28px;
+}
+.end .download {
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  z-index: 50;
+  width: 100%;
+  height: 122px;
+  background: url("../../images/download.png") center no-repeat;
 }
 body,
 html,
@@ -3848,7 +3868,7 @@ div.page.hide {
   bottom: 0;
 }
 .pageWrap .page.scale {
-  -webkit-transform: scale(0.9);
+  -webkit-transform: scale(0.8);
   bottom: -45px;
 }
 .pageWrap .page .flag {
