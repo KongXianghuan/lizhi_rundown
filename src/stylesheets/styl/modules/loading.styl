@@ -6,8 +6,8 @@
 	left: 0
 	right: 0
 	bottom: 0
-	background: #f9f8f3
-	z-index: 100
+	background: #000
+	z-index: 130
 	-webkit-transition: all 600ms ease-in
 
 	&.hide
@@ -16,50 +16,50 @@
 	.lizhi
 		position: absolute
 		width: 132px
-		height: 152px
 		left: 320px
-		top: 47%
+		top: 50%
+		left: 50%
 		-webkit-transform: translate3d(-50%,-50%,0)
 		z-index: 30
 
-		.lizhi-logo
-			position: absolute
-			top: 0
-			left: 0
-			z-index: 2
-			width: 132px
-			height: 152px
-			-webkit-transform-origin: 66px 74px
-			background: url("../../images/lizhi_logo.png") center no-repeat
-			-webkit-transform: transalte3d(0,0,0)
-			&.animated
-				animate(rotate, 2s, 50%, 56%)
+		// .lizhi-logo
+		// 	position: absolute
+		// 	top: 0
+		// 	left: 0
+		// 	z-index: 2
+		// 	width: 132px
+		// 	height: 152px
+		// 	-webkit-transform-origin: 66px 74px
+		// 	background: url("../../images/lizhi_logo.png") center no-repeat
+		// 	-webkit-transform: transalte3d(0,0,0)
+		// 	&.animated
+		// 		animate(rotate, 2s, 50%, 56%)
 
-		.lizhi-shadow
-			position: absolute
-			bottom: -8px
-			left: 50%
-			-webkit-transform: translateX(-48%)
-			width: 130px
-			height: 36px
-			background: url("../../images/lizhi_shadow.png")  no-repeat
+		// .lizhi-shadow
+		// 	position: absolute
+		// 	bottom: -8px
+		// 	left: 50%
+		// 	-webkit-transform: translateX(-48%)
+		// 	width: 130px
+		// 	height: 36px
+		// 	background: url("../../images/lizhi_shadow.png")  no-repeat
 
 		.percentage
-			position: absolute
-			left: 0
-			bottom: -60px
+			// position: absolute
+			// left: 0
+			// bottom: -60px
 			width: 132px
 			text-align: center
-			font-size: 20px
+			font-size: 24px
 			color: #666
 			line-height: 40px
 
 		.loading-text
-			position: absolute
-			left: 0
-			bottom: -90px
+			// position: absolute
+			// left: 0
+			// bottom: -90px
 			width: 132px
 			text-align: center
-			font-size: 20px
+			font-size: 24px
 			color: #666
 			line-height: 40px

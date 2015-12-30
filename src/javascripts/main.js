@@ -97,13 +97,19 @@
       interval: 0,
       canRun: false,
       lizhi: $('.run .lizhi-logo'),
-      bgm: true
+      bgm: true,
+      shareLayer: false,
+      isEnd: false,
+      audio: $('#bgm')[0]
     },
     ready: function() {
       var self = this;
       if ($(window).height() < 960) { $('.page').addClass('scale'); }
       window.addEventListener('deviceorientation', self.setSpeed, false);
       $('.scrollWrap').on('webkitTransitionEnd', function() { self.stop(); });
+      self.audio.addEventListener('ended', function() {
+        self.audio.play();
+      });
     },
     methods: {
       handelInterval: function() {
@@ -119,7 +125,6 @@
           if (currentX < -5400) { self.currentPage = 7; }
           if (currentX < -6400) { self.currentPage = 8; }
           if (currentX < -7100) { self.currentPage = 9; }
-          console.log(currentX);
         }, 500);
       },
       setSpeed: function(e) {
@@ -199,7 +204,6 @@
       toggleShow: function() {
         var self = this;
         var index = self.currentPage;
-        console.log('page'+index)
         $('#page'+index).addClass('animated');
         $('.page').each(function(i, page) {
           if (index - 2 < i && i < index + 2) {
@@ -213,14 +217,19 @@
         window.location.reload();
       },
       end: function() {
-        $('.container').addClass('hide');
-        $('.end').removeClass('hide');
+        this.isEnd = !this.End;
       },
       start: function() {
         this.canRun = true;
         this.bgm = true;
         $('.guide').addClass('hide');
+        $('.tip-click').addClass('hide');
+        setTimeout(function() {
+          $('.tip-click').hide();
+          $('.guide').hide();
+        }, 300)
         $('#bgm')[0].play();
+        console.log('start');
       },
       toggleBGM: function() {
         this.bgm = !this.bgm;
@@ -230,6 +239,9 @@
         } else {
           audio.pause();
         }
+      },
+      toggleShareLayer: function() {
+        this.shareLayer = !this.shareLayer;
       }
     }
   });
@@ -265,7 +277,7 @@
       });
       wx.ready(function () {
         var shareData = {
-          title: "荔枝FM年度盘点", // 分享标题
+          title: "滚动吧，荔枝君", // 分享标题
           link: "http://h5.lizhi.fm/congra/", // 分享链接
           imgUrl: "http://h5.lizhi.fm/congra/images/wx_cover.jpg", // 分享图标
           desc: ""

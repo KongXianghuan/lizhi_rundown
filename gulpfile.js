@@ -39,7 +39,7 @@ var webpackConfig = {
 //压缩js
 gulp.task('jsmin', function() {
   return combine([
-    gulp.src('src/javascripts/build.js'),
+    gulp.src('src/javascripts/**/**.js'),
     uglify(),
     gulp.dest('dist/javascripts')
   ]);

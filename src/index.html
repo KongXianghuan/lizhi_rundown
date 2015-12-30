@@ -4,11 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="format-detection" content="telephone=no, email=no">
-  <title>荔枝FM非官方年度盘点</title>
+  <title>滚动吧，荔枝君</title>
   <link rel="stylesheet" type="text/css" href="./stylesheets/css/main.css">
-  <style>
-    body, html, .container { width: 100%; height: 100%; overflow: hidden; margin: 0; padding: 0; }
-  </style>
   <script>
     if(/Android (\d+\.\d+)/.test(navigator.userAgent)){
       var version = parseFloat(RegExp.$1);
@@ -27,15 +24,15 @@
 <body id="rundown">
   <div class="layer-loading">
     <div class="lizhi">
-      <div class="lizhi-logo animated"></div>
+      <!-- <div class="lizhi-logo animated"></div> -->
       <div class="percentage">0%</div>
-      <div class="loading-text">努力滚动中</div>
+      <div class="loading-text">努力加载中</div>
     </div>
   </div>
   <div class="music" :class="{'off': !bgm}" @touchend="toggleBGM">
     <audio id="bgm" autoplay loop src="./audios/bgm.mp3"></audio>
   </div>
-  <div class="guide">
+  <div class="guide" @touchend="start">
     <div class="tip">
       <div class="tip-phone"></div>
       <div class="tip-arrow"></div>
@@ -45,8 +42,8 @@
       </div>
     </div>
   </div>
-  <div class="container hide">
-    <div class="scrollWrap"a>
+  <div class="container" :class="{'hide': isEnd}">
+    <div class="scrollWrap">
       <div class="pageWrap">
         <div id="page0" class="page">
           <div class="title"></div>
@@ -162,20 +159,28 @@
         </div>
 
       </div>
+      <div class="fire"></div>
       <div class="runway"></div>
     </div>
 
-    <div class="lizhi run" @touchend="start">
+    <div class="scrollWrap top">
+      <div class="flag-end"></div>
+    </div>
+
+    <div class="lizhi run">
       <div class="lizhi-logo"></div>
       <div class="lizhi-shadow"></div>
     </div>
-
-    <!-- <div class="pos" style="position: fixed; top: 0; left: 0; color:#fff; z-index: 999; width: 100px; height: 50px; background: #f00">{{speed}}</div>
-    <div class="pos2" style="position: fixed; top: 50px; left: 0; color:#fff; z-index: 999; width: 100px; height: 50px; background: #ccc">{{currentPage}}</div>
-    <div class="pos3" style="position: fixed; top: 100px; left: 0; color:#fff; z-index: 999; width: 100px; height: 50px; background: #ccc">{{currentPage}}</div> -->
+    
+    <div class="tip-click" @touchend="start">
+      <div class="tip-click-radius">
+        <div class="tip-click-inner"></div>
+        <div class="tip-click-outer"></div>
+      </div>
+    </div>
   </div>
 
-  <div class="end hide">
+  <div class="end" :class="{'hide': !isEnd}">
     <div class="end-wrap">
       <div class="title"></div>
       <div class="lizhi">
@@ -184,10 +189,12 @@
       </div>
       <div class="btn-group">
         <a class="left" href="javascript:;" @touchend="replay"></a>
-        <a class="right" href="javascript:;"></a>
+        <a class="right" href="javascript:;" @touchend="toggleShareLayer"></a>
       </div>
     </div>
   </div>
+
+  <div v-if="shareLayer" @touchend="toggleShareLayer" transition="fade" class="share-layer"></div>
   
   <script src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
   <script src="./javascripts/lib/vue.min.js"></script>
