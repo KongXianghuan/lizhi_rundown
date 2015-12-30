@@ -84,7 +84,6 @@ Loader.prototype = {
     } else {
       var percentage = parseInt(this.counter/this.resourcesLen * 100);
       this.trigger('progress', percentage);
-      console.log(percentage)
     }
   }
 }

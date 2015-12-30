@@ -70,7 +70,7 @@
     $page.removeClass('hide');
     setTimeout(function() {
       $loading.hide();
-    }, 5000)
+    }, 5000);
   }
 
   var load = loader(manifest);
@@ -232,7 +232,6 @@
           $('.guide').hide();
         }, 300)
         $('#bgm')[0].play();
-        console.log('start');
       },
       toggleBGM: function() {
         this.bgm = !this.bgm;
