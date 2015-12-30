@@ -1,4 +1,4 @@
-// (function(win, doc, $, Vue) {
+(function(win, doc, $, Vue) {
   var manifest = [
     //bgm
     './audios/bgm.mp3',
@@ -70,7 +70,7 @@
     $page.removeClass('hide');
     setTimeout(function() {
       $loading.hide();
-    }, 5000);
+    },600);
   }
 
   var load = loader(manifest);
@@ -281,8 +281,8 @@
         var shareData = {
           title: "滚动吧，荔枝君", // 分享标题
           link: "http://h5.lizhi.fm/congra/", // 分享链接
-          imgUrl: "http://h5.lizhi.fm/congra/images/wx_cover.jpg", // 分享图标
-          desc: ""
+          imgUrl: "http://h5.lizhi.fm/congra/images/wx_share.png", // 分享图标
+          desc: "2015，我们为国家接过盘，为人民吸过霾，眼看着马月变猴年，一起来回顾一下这些故事吧！"
         };
         wx.onMenuShareTimeline(shareData);
         wx.onMenuShareAppMessage(shareData);
@@ -292,4 +292,4 @@
   });
 
 
-// })(window, document, Zepto, Vue);
+})(window, document, jQuery, Vue);
