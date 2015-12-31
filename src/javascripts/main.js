@@ -279,10 +279,10 @@
       });
       wx.ready(function () {
         var shareData = {
-          title: "滚动吧，荔枝君", // 分享标题
+          title: "滚动吧，荔枝君！", // 分享标题
           link: "http://h5.lizhi.fm/congra/", // 分享链接
           imgUrl: "http://h5.lizhi.fm/congra/images/wx_share.png", // 分享图标
-          desc: "2015，我们为国家接过盘，为人民吸过霾，眼看着马月变猴年，一起来回顾一下这些故事吧！"
+          desc: "据统计，能看懂5页的是85后，看懂7页的是90后，95后全都懂！滚不动的，嗯...蜀黍，不约！"
         };
         wx.onMenuShareTimeline(shareData);
         wx.onMenuShareAppMessage(shareData);
