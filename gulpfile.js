@@ -87,7 +87,7 @@ gulp.task('dist', ['clean'], function() {
 //cdn
 gulp.task('cdn', function() {
   return gulp.src('src/*.html')
-    .pipe(cdn({asset: 'src', cdn: 'http://h5.lizhi.fm'}))
+    .pipe(cdn({asset: 'src', cdn: 'http://cdn.lizhi.fm/web_res/market/h5/congra'}))
     .pipe(gulp.dest('dist'));
 });
 
